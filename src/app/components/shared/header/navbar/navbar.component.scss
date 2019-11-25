@@ -1,0 +1,41 @@
+@import './src/scss/include/vars';
+
+.navbar {
+  padding-top: 41px;
+
+  .logo {
+    color: $white;
+    font-size: 32px;
+    float: left;
+  }
+
+  .main-menu {
+    float: right;
+    line-height: 26px;
+
+    li {
+      display: inline-block;
+      margin-right: 53px;
+      vertical-align: middle;
+
+      &:last-child {
+        margin-right: 0;
+        padding-top: 6px;
+      }
+
+      a {
+        color: $white;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+      i.icon-search {
+        color: $white;
+        cursor: pointer;
+        font-size: 26px;
+      }
+    }
+  }
+}

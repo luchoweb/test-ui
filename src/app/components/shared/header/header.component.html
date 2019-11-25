@@ -1,3 +1,29 @@
-<app-navbar></app-navbar>
+<header class="main-header">
 
-<p>header works!</p>
+  <app-navbar></app-navbar>
+
+  <div class="poll-header">
+    <div class="content">
+      <p class="fw-300">What's your opinion on</p>
+      <h3 class="fw-400">{{ poll.name }}?</h3>
+      <p class="intro fw-300">{{ poll.intro }}</p>
+      <a href="{{ poll.moreInfo }}" target="blank" class="fw-300 link-wiki"><i class="icon-wikipedia"></i> <span>More information</span></a>
+      <p class="veredict fw-900">What's Your Verdict?</p>
+      <div class="thumbs">
+        <button class="thumb-up" (click)="voting('up')"><i class="icon-thumb_up"></i></button>
+        <button class="thumb-down" (click)="voting('down')"><i class="icon-thumb_down"></i></button>
+      </div>
+    </div>
+    <div class="bg-blur"></div>
+  </div>
+
+  <div class="closing-poll clearfix">
+    <div class="col col-left">
+      <p>Closing in</p>
+    </div>
+    <div class="col col-right">
+      <p>22 <span class="fw-300">days</span></p>
+    </div>
+  </div>
+
+</header>

@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+
+@import './include/reset';
+@import './include/vars';
+@import './include/icons';
+
+//- Font weight
+$weights: 300, 400, 900;
+@each $weight in $weights {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}
+
+body {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  &::after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 1024px;
+
+  @media (max-width: $desktop) {
+    width: 768px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 640px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 96%;
+  }
+}
+
+.col {
+  display: inline-block;
+  vertical-align: middle;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}

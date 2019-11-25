@@ -1,0 +1,53 @@
+@import './src/scss/include/vars';
+
+.content {
+  .dialog {
+    background-color: $gray;
+    font-size: 15px;
+    padding: 28px 24px;
+    position: relative;
+
+    .close {
+      cursor: pointer;
+      float: right;
+      font-size: 20px;
+      line-height: 60px;
+
+      @media (max-width: $mobile) {
+        line-height: 15px;
+      }
+    }
+
+    .col-left {
+      margin-right: 2%;
+
+      p {
+        font-size: 22px;
+      }
+      h4 {
+        font-size: 37px;
+      }
+    }
+
+    .col-right {
+      width: 76%;
+
+      @media (max-width: $desktop) {
+        width: 69%;
+      }
+    
+      @media (max-width: $tablet) {
+        width: 62%;
+      }
+    
+      @media (max-width: $mobile) {
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      p {
+        line-height: 20px;
+      }
+    }
+  }
+}

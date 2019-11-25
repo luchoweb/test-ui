@@ -1,1 +1,19 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="container clearfix">
+    <a routerLink="/" (click)="setTitle( 'Rule of Thumb' )" class="logo">Rule of Thumb.</a>
+    <ul class="main-menu">
+      <li>
+        <a routerLink="/" (click)="setTitle( 'Past Trials - Rule of Thumb' )">Past Trials</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="setTitle( 'How It Works - Rule of Thumb' )">How It Works</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="setTitle( 'Log In/Sign Up - Rule of Thumb' )">Log In/Sign Up</a>
+      </li>
+      <li>
+        <i class="icon-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+//- breakpopints media queries
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 767px;
+$sm-mob: 400px;
+
+//- Colors
+$black: #333333;
+$blue-light: #1cbbb4;
+$gray: #ebebeb;
+$yellow: #ffad1d;
+$white: #ffffff;
+
+//- Sizes for Blur Header
+$cw: 37%;
+$ch: 54%;
+$ct: 35%;
+$cl: 12%;
+$h: 130vh;
+$w-blur: (100% / $cw) * 100%;
+$t1: ($cl - 6%) - ($cw / 2%);
+$t2: ($ct - 29%) - ($ch / 2%);
+
+//- Mobile sizes blur $sm-mob
+$sm-cw: 96%;
+$sm-ch: 59%;
+$sm-ct: 35%;
+$sm-cl: 2%;
+$sm-h: 130vh;
+$sm-w-blur: (100% / $sm-cw) * 100%;
+$sm-t1: -$sm-cl;
+$sm-t2: ($sm-ct - 29%) - ($sm-ch / 2%);

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "created" : "2019-10-25 08:10:11",
+    "type" : "featured",
+    "name" : "Pope Francis",
+    "intro" : "He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)",
+    "image" : "./assets/img/pope.jpg",
+    "moreInfo" : "https://en.wikipedia.org/wiki/Pope_francis",
+    "votesUp" : 50,
+    "votesDown" : 50
+  },
+  {
+    "id" : 2,
+    "created" : "2019-10-25 08:23:01",
+    "type" : "normal",
+    "name" : "Kanye West",
+    "intro" : "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+    "image" : "./assets/img/kanye.jpg",
+    "category" : "Entertainment",
+    "votesUp" : 64,
+    "votesDown" : 36
+  },
+  {
+    "id" : 3,
+    "created" : "2019-10-25 08:50:12",
+    "type" : "normal",
+    "name" : "Mark Zuckerberg",
+    "intro" : "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+    "image" : "./assets/img/mark.jpg",
+    "category" : "Business",
+    "votesUp" : 36,
+    "votesDown" : 64
+  },
+  {
+    "id" : 4,
+    "created" : "2019-10-25 09:03:21",
+    "type" : "normal",
+    "name" : "Cristina Fernández de Kirchner",
+    "intro" : "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+    "image" : "./assets/img/cristina.jpg",
+    "category" : "Politics",
+    "votesUp" : 36,
+    "votesDown" : 64
+  },
+  {
+    "id" : 5,
+    "created" : "2019-10-25 08:10:33",
+    "type" : "normal",
+    "name" : "Malala Yousafzai",
+    "intro" : "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+    "image" : "./assets/img/malala.jpg",
+    "category" : "Entertainment",
+    "votesUp" : 64,
+    "votesDown" : 36
+  }
+]

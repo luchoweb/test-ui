@@ -1,0 +1,30 @@
+@import './src/scss/include/vars';
+
+.not-found {
+  background-color: $gray;
+  bottom: 0;
+  color: #aaaaaa;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+
+  .container {
+    margin-top: 30vh;
+  }
+
+  h1 {
+    font-size: 150px;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #999999;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,185 @@
+@import './src/scss/include/vars';
+
+.main-header {
+  background-image: url('/assets/img/pope.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 740px;
+  min-height: $h;
+  margin-bottom: 32px;
+  position: relative;
+
+  @media (max-width: $mobile) {
+    height: 740px;
+    min-height: $sm-h;
+  }
+
+  .poll-header {
+    background: inherit;
+    color: $white;
+    height: 450px;
+    left: $cl;
+    min-height: $ch;
+    overflow: hidden;
+    position: absolute;
+    top: $ct;
+    transform: translate(0%, -($ct - $cl));
+    width: $cw;
+
+    @media (max-width: $mobile) {
+      height: auto;
+      left: $sm-cl;
+      min-height: $sm-ch;
+      transform: translate(0%, -($sm-ct - $sm-cl));
+      width: $sm-cw;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.3);
+      box-sizing: border-box;
+      height: 100%;
+      padding: 39px 33px;
+    }
+
+    .bg-blur {
+      background: inherit;
+      filter: blur(20px);
+      height: 740px;
+      left: 0;
+      min-height: $h;
+      position: absolute;
+      top: 0;
+      transform: translate(
+        $t1,
+        $t2
+      );
+      width: $w-blur;
+      z-index: -1;
+
+      @media (max-width: $mobile) {
+        height: 740px;
+        min-height: $sm-h;
+        transform: translate(
+          $sm-t1,
+          $sm-t2
+        );
+        width: $sm-w-blur;
+      }
+    }
+
+    h3 {
+      font-size: 60px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      &.intro {
+        font-size: 21px;
+        margin-bottom: 25px;
+      }
+
+      &.veredict {
+        margin: 45px 0 37px 0;
+      }
+    }
+
+    a {
+      color: $white;
+
+      &.link-wiki {
+        font-size: 14px;
+
+        i {
+          margin-right: 5px;
+        }
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .thumbs {
+      margin: 0 -33px;
+
+      button {
+        appearance: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        outline: none;
+        width: 50%;
+
+        i {
+          color: $white;
+          font-size: 38px;
+          line-height: 78px;
+        }
+
+        &.thumb-up {
+          background-color: rgba($color: $blue-light, $alpha: .5);
+        }
+
+        &.thumb-down {
+          background-color: rgba($color: $yellow, $alpha: .5);
+        }
+
+        &:focus {
+          border: 1px solid $white;
+        }
+      }
+    }
+  }
+
+  .closing-poll{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    .col {
+      float: left;
+      height: 50px;
+
+      p {
+        line-height: 50px;
+      }
+    }
+
+    .col-left {
+      background-color: rgba($color: $black, $alpha: .2);
+      position: relative;
+      text-align: right;
+      width: 30%;
+
+      &::before {
+        content: '';
+        border-style: solid;
+        border-width: 6px 0 6px 7px;
+        border-color: transparent transparent transparent #ababa9;
+        height: 0;
+        position: absolute;
+        right: -7px;
+        top: 40%;
+        width: 0;
+      }
+
+      p {
+        color: $white;
+        font-size: 13px;
+        margin-right: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    .col-right {
+      background-color: rgba($color: $white, $alpha: .4);
+      width: 70%;
+
+      p {
+        color: #464646;
+        font-size: 36px;
+        margin-left: 17px;
+      }
+    }
+  }
+}
