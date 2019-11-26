@@ -2,7 +2,8 @@
 $desktop: 1024px;
 $tablet: 768px;
 $mobile: 767px;
-$sm-mob: 400px;
+$sm-mob: 640px;
+$xs-mob: 400px;
 
 //- Colors
 $black: #333333;
@@ -21,6 +22,12 @@ $w-blur: (100% / $cw) * 100%;
 $t1: ($cl - 6%) - ($cw / 2%);
 $t2: ($ct - 29%) - ($ch / 2%);
 
+//- Tablet landscape
+$tl-cw: 51%;
+$tl-cl: 9%;
+$tl-ct: 32%;
+$tl-t1: ($tl-cl - 4%) - ($tl-cw / 2%);
+
 //- Mobile sizes blur $sm-mob
 $sm-cw: 96%;
 $sm-ch: 59%;
@@ -30,3 +37,6 @@ $sm-h: 130vh;
 $sm-w-blur: (100% / $sm-cw) * 100%;
 $sm-t1: -$sm-cl;
 $sm-t2: ($sm-ct - 29%) - ($sm-ch / 2%);
+
+//- XS mobile sizes
+$xs-ct: 42%;

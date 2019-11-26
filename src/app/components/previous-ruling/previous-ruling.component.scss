@@ -3,10 +3,15 @@
 h2 {
   font-size: 40px;
   margin: 30px 0;
+
+  @media (max-width: $mobile) {
+    font-size: 35px;
+  }
 }
 
 ul.previous-rulings {
   li {
+    background-size: cover;
     color: $white;
     float: left;
     height: 550px;
@@ -19,10 +24,35 @@ ul.previous-rulings {
       margin-right: 40px;
     }
 
+    @media (max-width: $desktop) {
+      height: 460px;
+      width: 363px;
+    }
+
+    @media (max-width: $tablet) {
+      height: 400px;
+      margin-bottom: 20px;
+      width: 310px;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
     .info-poll {
       bottom: 0;
+      left: 0;
       padding: 0 20px 0 40px;
       position: absolute;
+      right: 0;
+
+      @media (max-width: $sm-mob) {
+        padding: 0 20px 0 30px;
+      }
 
       .name-poll {
         position: relative;
@@ -31,8 +61,15 @@ ul.previous-rulings {
           bottom: 6px;
           left: -40px;
           position: absolute;
-          // margin: 6px 0 0 -40px;
           padding: 7px 6px;
+
+          @media (max-width: $tablet) {
+            bottom: 0;
+          }
+
+          @media (max-width: $sm-mob) {
+            left:  -30px;
+          }
   
           &.-up {
             background-color: $blue-light;
@@ -44,12 +81,24 @@ ul.previous-rulings {
   
           i {
             font-size: 18px;
+
+            @media (max-width: $tablet) {
+              font-size: 15px;
+            }
           }
         }
 
         h3 {
           font-size: 45px;
           margin-bottom: 15px;
+
+          @media (max-width: $desktop) {
+            font-size: 40px;
+          }
+
+          @media (max-width: $tablet) {
+            font-size: 30px;
+          }
         }
       }
 
@@ -68,6 +117,14 @@ ul.previous-rulings {
           color: $white;
           padding: 13px 26px;
 
+          @media (max-width: $tablet) {
+            padding: 10px 15px;
+          }
+
+          @media (max-width: $sm-mob) {
+            font-size: 13px;
+          }
+
           &:hover {
             background-color: rgba($color: $black, $alpha: .5);
           }
@@ -84,6 +141,10 @@ ul.previous-rulings {
       .thumbs-bars {
         margin: 20px -21px 0 -40px;
 
+        @media (max-width: $sm-mob) {
+          margin-left: -30px;
+        }
+
         .bar {
           float: left;
           min-width: 23%;
@@ -94,6 +155,10 @@ ul.previous-rulings {
 
             i, span {
               font-size: 30px;
+
+              @media (max-width: $tablet) {
+                font-size: 25px;
+              }
             }
 
             i {

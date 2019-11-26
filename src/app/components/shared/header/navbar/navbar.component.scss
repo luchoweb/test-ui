@@ -3,15 +3,33 @@
 .navbar {
   padding-top: 41px;
 
+  @media (max-width: $sm-mob) {
+    padding-top: 21px;
+  }
+
   .logo {
     color: $white;
     font-size: 32px;
     float: left;
+
+    @media (max-width: $sm-mob) {
+      display: block;
+      float: none;
+      margin-bottom: 11px;
+      text-align: center;
+    }
   }
 
   .main-menu {
     float: right;
     line-height: 26px;
+
+    @media (max-width: $sm-mob) {
+      display: block;
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
 
     li {
       display: inline-block;
@@ -21,6 +39,14 @@
       &:last-child {
         margin-right: 0;
         padding-top: 6px;
+      }
+
+      @media (max-width: $tablet) {
+        margin-right: 30px;
+      }
+
+      @media (max-width: $xs-mob) {
+        margin-right: 17px;
       }
 
       a {

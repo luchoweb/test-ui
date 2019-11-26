@@ -27,19 +27,29 @@
     transform: translate(0%, -($ct - $cl));
     width: $cw;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       height: auto;
+      left: $tl-cl;
+      min-height: auto;
+      transform: translate(0%, -($tl-ct - $tl-cl));
+      width: $tl-cw;
+    }
+
+    @media (max-width: $mobile) {
       left: $sm-cl;
-      min-height: $sm-ch;
       transform: translate(0%, -($sm-ct - $sm-cl));
       width: $sm-cw;
+    }
+
+    @media (max-width: $xs-mob) {
+      top: $xs-ct;
     }
 
     .content {
       background: rgba(0, 0, 0, 0.3);
       box-sizing: border-box;
       height: 100%;
-      padding: 39px 33px;
+      padding: 39px 33px 0 33px;
     }
 
     .bg-blur {
@@ -57,6 +67,16 @@
       width: $w-blur;
       z-index: -1;
 
+      @media (max-width: $tablet) {
+        height: 740px;
+        min-height: $h;
+        transform: translate(
+          $tl-t1,
+          $t2
+        );
+        width: $w-blur;
+      }
+
       @media (max-width: $mobile) {
         height: 740px;
         min-height: $sm-h;
@@ -71,12 +91,20 @@
     h3 {
       font-size: 60px;
       margin-bottom: 30px;
+
+      @media (max-width: $desktop) {
+        font-size: 50px;
+      }
     }
 
     p {
       &.intro {
         font-size: 21px;
         margin-bottom: 25px;
+
+        @media (max-width: $desktop) {
+          font-size: 19px;
+        }
       }
 
       &.veredict,
@@ -96,6 +124,12 @@
 
           &:hover {
             background-color: rgba($color: $black, $alpha: .6);
+          }
+
+          @media (max-width: $xs-mob) {
+            display: block;
+            margin-left: 0;
+            margin-top: 10px;
           }
         }
       }

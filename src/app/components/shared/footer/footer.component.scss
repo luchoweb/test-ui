@@ -19,6 +19,14 @@
 
   h2 {
     font-size: 30px;
+
+    @media (max-width: $desktop) {
+      font-size: 25px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
   }
 
   a {
@@ -31,6 +39,19 @@
 
     &:hover {
       background-color: rgba($color: $white, $alpha: .5);
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      margin-top: -31px;
+      padding: 10px 30px;
+    }
+
+    @media (max-width: $sm-mob) {
+      display: block;
+      float: none;
+      margin-top: 20px;
+      text-align: center;
     }
   }
 }
@@ -45,9 +66,17 @@ footer {
     background-repeat: repeat-x;
     height: 1px;
     margin-bottom: 30px;
+
+    @media (max-width: $sm-mob) {
+      margin-bottom: 20px;
+    }
   }
   
   ul {
+    @media (max-width: $sm-mob) {
+      text-align: center;
+    }
+
     li {
       display: inline-block;
       vertical-align: middle;
@@ -55,6 +84,10 @@ footer {
 
     &.ft-menu {
       float: left;
+
+      @media (max-width: $sm-mob) {
+        float: none;
+      }
 
       li {
         margin-right: 20px;
@@ -76,6 +109,11 @@ footer {
 
     &.ft-social {
       float: right;
+
+      @media (max-width: $sm-mob) {
+        float: none;
+        margin-top: 15px;
+      }
 
       li {
         font-size: 12px;
