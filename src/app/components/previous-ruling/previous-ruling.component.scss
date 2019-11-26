@@ -1,0 +1,113 @@
+@import './src/scss/include/vars';
+
+h2 {
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+ul.previous-rulings {
+  li {
+    color: $white;
+    float: left;
+    height: 550px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 492px;
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+    }
+
+    .info-poll {
+      bottom: 0;
+      padding: 0 20px 0 40px;
+      position: absolute;
+
+      .name-poll {
+        position: relative;
+
+        .thumb {
+          bottom: 6px;
+          left: -40px;
+          position: absolute;
+          // margin: 6px 0 0 -40px;
+          padding: 7px 6px;
+  
+          &.-up {
+            background-color: $blue-light;
+          }
+  
+          &.-down {
+            background-color: $yellow;
+          }
+  
+          i {
+            font-size: 18px;
+          }
+        }
+
+        h3 {
+          font-size: 45px;
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        &.intro {
+          margin-bottom: 20px;
+        }
+      }
+
+      a {
+        display: inline-block;
+
+        &.report-link {
+          background-color: rgba($color: $black, $alpha: .1);
+          border: 1px solid $white;
+          color: $white;
+          padding: 13px 26px;
+
+          &:hover {
+            background-color: rgba($color: $black, $alpha: .5);
+          }
+        }
+      }
+
+      .date-poll {
+        float: right;
+        font-size: 12px;
+        margin-top: 10px;
+        text-align: right;
+      }
+
+      .thumbs-bars {
+        margin: 20px -21px 0 -40px;
+
+        .bar {
+          float: left;
+          width: 50%;
+
+          p {
+            padding: 9px 10px;
+
+            i, span {
+              font-size: 30px;
+            }
+
+            i {
+              margin-right: 5px;
+            }
+          }
+
+          &.-up {
+            background-color: rgba($color: $blue-light, $alpha: .8);
+          }
+          &.-down {
+            background-color: rgba($color: $yellow, $alpha: .8);
+          }
+        }
+      }
+    }
+  }
+}

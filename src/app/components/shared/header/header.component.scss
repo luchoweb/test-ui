@@ -118,10 +118,18 @@
 
         &.thumb-up {
           background-color: rgba($color: $blue-light, $alpha: .5);
+
+          &:hover {
+            background-color: rgba($color: $blue-light, $alpha: .8);
+          }
         }
 
         &.thumb-down {
           background-color: rgba($color: $yellow, $alpha: .5);
+
+          &:hover {
+            background-color: rgba($color: $yellow, $alpha: .8);
+          }
         }
 
         &:focus {

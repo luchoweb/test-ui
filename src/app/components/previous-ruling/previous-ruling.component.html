@@ -1,1 +1,25 @@
-<p>previous-ruling works!</p>
+<h2 class="fw-300">Previous Rulings</h2>
+
+<ul class="previous-rulings clearfix">
+  <li *ngFor="let poll of polls" class="poll" [ngStyle]="{'background-image' : 'linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)), url('+ poll.image +')'}">
+    <div class="info-poll clearfix">
+      <div class="name-poll">
+        <div class="thumb -up">
+          <i class="icon-thumb_up"></i>
+        </div>
+        <h3>{{ poll.name }}</h3>
+      </div>
+      <p class="fw-300 intro">{{ poll.intro }}</p>
+      <a href="#{{ poll.id }}" class="report-link">View Full Report</a>
+      <p class="date-poll"><span class="fw-900">{{ formatDate(poll.created) }}</span> <br> in {{ poll.category }}</p>
+      <div class="thumbs-bars clearfix">
+        <div class="bar -up" [ngStyle]="{'width' : ''+ percentBars('up', poll.votesUp, poll.votesDown) +'%'}">
+            <p><i class="icon-thumb_up"></i> <span class="fw-300">{{ percentBars('up', poll.votesUp, poll.votesDown) }}%</span></p>
+        </div>
+        <div class="bar -down" [ngStyle]="{'width' : ''+ percentBars('down', poll.votesUp, poll.votesDown) +'%'}">
+            <p><i class="icon-thumb_down"></i> <span class="fw-300">{{ percentBars('down', poll.votesUp, poll.votesDown) }}%</span></p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
