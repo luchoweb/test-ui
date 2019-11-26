@@ -4,7 +4,7 @@
   <li *ngFor="let poll of polls" class="poll" [ngStyle]="{'background-image' : 'linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.8)), url('+ poll.image +')'}">
     <div class="info-poll clearfix">
       <div class="name-poll">
-        <div class="thumb -up">
+        <div [className]="poll.votesUp > poll.votesDown ? 'thumb -up' : 'thumb -down'">
           <i class="icon-thumb_up"></i>
         </div>
         <h3>{{ poll.name }}</h3>

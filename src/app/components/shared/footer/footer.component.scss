@@ -1,0 +1,102 @@
+@import './src/scss/include/vars';
+
+.submit-name {
+  padding: 28px 19px;
+  position: relative;
+
+  &::after {
+    content: '';
+    background: url(/assets/img/bg-submit-name.jpg) center center no-repeat;
+    background-size: cover;
+    opacity: 0.15;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  a {
+    border: 3px solid $black;
+    color: $black;
+    float: right;
+    font-size: 20px;
+    margin-top: -42px;
+    padding: 15px 36px;
+
+    &:hover {
+      background-color: rgba($color: $white, $alpha: .5);
+    }
+  }
+}
+
+footer {
+  margin: 40px 0 20px 0;
+
+  .dotted-spaced {
+    background-image: linear-gradient(to right, #333 10%, rgba(255, 255, 255, 0) 0%);
+    background-position: top;
+    background-size: 8px 1px;
+    background-repeat: repeat-x;
+    height: 1px;
+    margin-bottom: 30px;
+  }
+  
+  ul {
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &.ft-menu {
+      float: left;
+
+      li {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $black;
+          font-size: 12px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &.ft-social {
+      float: right;
+
+      li {
+        font-size: 12px;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $black;
+
+          &:hover {
+            opacity: .8;
+          }
+
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
