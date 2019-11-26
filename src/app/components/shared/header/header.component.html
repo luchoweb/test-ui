@@ -8,10 +8,19 @@
       <h3 class="fw-400">{{ poll.name }}?</h3>
       <p class="intro fw-300">{{ poll.intro }}</p>
       <a href="{{ poll.moreInfo }}" target="blank" class="fw-300 link-wiki"><i class="icon-wikipedia"></i> <span>More information</span></a>
-      <p class="veredict fw-900">What's Your Verdict?</p>
-      <div class="thumbs">
+      <p class="veredict fw-900" [hidden] = "isShowThumbs">What's Your Verdict?</p>
+      <p class="vote-again fw-900" [hidden] = "!isShowThumbs">Thank you for voting! <button (click)="voteAgain()">Vote again</button></p>
+      <div class="thumbs" [hidden] = "isShowThumbs">
         <button class="thumb-up" (click)="voting('up')"><i class="icon-thumb_up"></i></button>
         <button class="thumb-down" (click)="voting('down')"><i class="icon-thumb_down"></i></button>
+      </div>
+      <div class="thumbs-bars clearfix" [hidden] = "!isShowThumbs">
+        <div class="bar -up" [ngStyle]="{'width' : ''+ percentBars('up', poll.votesUp, poll.votesDown) +'%'}">
+            <p><i class="icon-thumb_up"></i> <span class="fw-300">{{ percentBars('up', poll.votesUp, poll.votesDown) }}%</span></p>
+        </div>
+        <div class="bar -down" [ngStyle]="{'width' : ''+ percentBars('down', poll.votesUp, poll.votesDown) +'%'}">
+            <p><i class="icon-thumb_down"></i> <span class="fw-300">{{ percentBars('down', poll.votesUp, poll.votesDown) }}%</span></p>
+        </div>
       </div>
     </div>
     <div class="bg-blur"></div>

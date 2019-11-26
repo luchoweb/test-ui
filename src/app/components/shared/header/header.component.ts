@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   public poll: any = '';
   public dataSaved: any;
+  public isShowThumbs = false;
 
   constructor( private appServices: AppServices) {}
 
@@ -36,6 +37,18 @@ export class HeaderComponent implements OnInit {
     }
 
     this.saveVotes( this.poll );
+    this.isShowThumbs = !this.isShowThumbs;
+  }
+
+  percentBars( type, vUp, vDown ) {
+    let percent = 0;
+    if ( type === 'up' ) {
+      percent = (vUp * 100) / (vUp + vDown);
+    } else if ( type === 'down' ) {
+      percent = (vDown * 100) / (vUp + vDown);
+    }
+
+    return percent.toFixed(0);
   }
 
   getData() {
@@ -49,5 +62,9 @@ export class HeaderComponent implements OnInit {
 
   saveVotes( pollData ) {
     localStorage.setItem( 'poll', JSON.stringify( pollData ) );
+  }
+
+  voteAgain() {
+    this.isShowThumbs = !this.isShowThumbs;
   }
 }

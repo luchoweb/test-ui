@@ -86,7 +86,8 @@ ul.previous-rulings {
 
         .bar {
           float: left;
-          width: 50%;
+          min-width: 23%;
+          max-width: 77%;
 
           p {
             padding: 9px 10px;

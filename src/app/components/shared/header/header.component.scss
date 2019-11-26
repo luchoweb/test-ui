@@ -79,8 +79,25 @@
         margin-bottom: 25px;
       }
 
-      &.veredict {
+      &.veredict,
+      &.vote-again {
         margin: 45px 0 37px 0;
+      }
+
+      &.vote-again {
+        button {
+          appearance: none;
+          background-color: rgba($color: $black, $alpha: .3);
+          border: 2px solid $white;
+          color: $white;
+          cursor: pointer;
+          margin-left: 10px;
+          padding: 10px 15px;
+
+          &:hover {
+            background-color: rgba($color: $black, $alpha: .6);
+          }
+        }
       }
     }
 
@@ -134,6 +151,35 @@
 
         &:focus {
           border: 1px solid $white;
+        }
+      }
+    }
+
+    .thumbs-bars {
+      margin: 0 -33px;
+
+      .bar {
+        float: left;
+        min-width: 23%;
+        max-width: 77%;
+
+        p {
+          padding: 14px 10px;
+
+          i, span {
+            font-size: 30px;
+          }
+
+          i {
+            margin-right: 5px;
+          }
+        }
+
+        &.-up {
+          background-color: rgba($color: $blue-light, $alpha: .8);
+        }
+        &.-down {
+          background-color: rgba($color: $yellow, $alpha: .8);
         }
       }
     }
