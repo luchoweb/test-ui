@@ -21,7 +21,7 @@ export class PreviousRulingComponent implements OnInit {
 
   getData() {
     this.appServices.getJSON()
-      .subscribe(resp => {
+      .subscribe((resp: Array<any>) => {
         this.polls = resp.filter( ( poll ) => poll.type === 'normal' );
       });
   }

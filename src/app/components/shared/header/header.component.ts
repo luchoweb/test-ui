@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
 
   getData() {
     this.appServices.getJSON()
-      .subscribe(resp => {
+      .subscribe((resp: Array<any>) => {
         const polls = resp.filter( ( poll ) => poll.type === 'featured' );
         this.poll = polls[0];
         this.saveVotes( this.poll );
